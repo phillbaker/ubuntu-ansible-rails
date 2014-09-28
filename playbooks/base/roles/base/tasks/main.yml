@@ -16,7 +16,7 @@
 # ====================================================
 
 - name: Add deployment user
-  action: user name=deploy password=$deploy_password
+  action: user name=deploy password=$deploy_password shell=/bin/bash
 
 - name: Add authorized deploy key
   action: authorized_key user=deploy key='$FILE(~/.ssh/id_rsa.pub)'
